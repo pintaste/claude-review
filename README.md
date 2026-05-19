@@ -1,6 +1,6 @@
 # claude-review
 
-![Python](https://img.shields.io/badge/python-3.12-blue) ![Claude](https://img.shields.io/badge/Claude-API-orange) ![GitHub Actions](https://img.shields.io/badge/GitHub-Actions-black)
+![Python](https://img.shields.io/badge/python-3.12-blue) ![Claude](https://img.shields.io/badge/Claude-API-orange) ![GitHub Actions](https://img.shields.io/badge/GitHub-Actions-black) ![Tests](https://github.com/pintaste/claude-review/actions/workflows/test.yml/badge.svg)
 
 GitHub Action that posts AI code review comments on every PR using Claude.
 
