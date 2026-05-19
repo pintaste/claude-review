@@ -1,0 +1,26 @@
+name: 'Claude PR Review'
+description: 'AI-powered PR review using Claude'
+inputs:
+  anthropic_api_key:
+    description: 'Anthropic API key'
+    required: true
+  github_token:
+    description: 'GitHub token for posting comments'
+    required: true
+    default: ${{ github.token }}
+  focus:
+    description: 'Review focus: security | performance | style | all (comma-separated)'
+    required: false
+    default: 'all'
+  max_tokens:
+    description: 'Max tokens for Claude response'
+    required: false
+    default: '2048'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    ANTHROPIC_API_KEY: ${{ inputs.anthropic_api_key }}
+    GITHUB_TOKEN: ${{ inputs.github_token }}
+    REVIEW_FOCUS: ${{ inputs.focus }}
+    MAX_TOKENS: ${{ inputs.max_tokens }}
